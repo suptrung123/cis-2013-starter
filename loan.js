@@ -1,7 +1,7 @@
 var $ = function (id) 
 {
     return document.getElementById(id);
-}
+};
 
 
 /*
@@ -15,9 +15,12 @@ var $ = function (id)
 */
  var calculate = function()
  {
-    
-    
- }
+    var floatMonthlyPayment, intLoanTerm, floatTotalCost; 
+   floatMonthlyPayment = parseFloat ($("monthly_payment"),value);
+  IntLoanTerm = parseInt ($("loan_length").value);
+  floatTotalCost = parseFloat (floatMonthlyPayment*intLoanTerm);
+  $("total_cost").value = floatTotalCost;
+ };
  
  window.onload = function () 
 {
@@ -25,4 +28,5 @@ var $ = function (id)
     $("total_cost").value = "";
     $("calc").onclick = calculate;
     $("monthly_payment").focus();
-}
+    };
+    
